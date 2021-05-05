@@ -5,7 +5,7 @@ matrix:
     - os: linux
       env: TEST_LANG='paper'
 script: |
-  if [[ `$TEST_LANG == paper ]]
+  if [[ $TEST_LANG == paper ]]
   then
     source .ci/build-paper.sh
   fi
