@@ -1,146 +1,221 @@
 % this copy of my CV is meant for continuous integration.
-% it's based on dan foreman-mackey's example here https://dfm.io/posts/travis-latex/
-%. style and layout from david w hogg: 
-%--------------------------------------------------------------
-% to-do:
-%   - Sections: non-research related jobs, outreach, awards, publications, presentations, code/skills, ...
-%   - Make a better template
-%   - Include mentorship
-%   - Include SULI presentations
-% REMINDER: Don't ever push to github from here, instead push locally using this to preview.... there must be a better way
-%--------------------------------------------------------------
-
-\documentclass[12pt,letterpaper]{article}
-
-\input{cvstyle}
-
-\begin{document}\thispagestyle{empty}\sloppy\sloppypar\raggedbottom
-
-\textbf{\Large Mitchell Karmen} \hfill
-\textsf{\small mitchell@nyu.edu} \\[0.5ex] %optional: website
-Research Assistant, Supernova Cosmology Project, Lawrence Berkeley National Laboratory\\[0.5ex]
-
-\medskip
-
-I study Type Ia Supernovae, the explosions of white dwarf stars, and how they can inform us about the past, present, and future of our universe.  I combine astrophysical models and cutting-edge statistical models such as machine learning in order to develop methods of studying these events.  More generally, I'm interested in all kinds of extragalactic transients, and data science as it applies to time-domain astronomy.
+% it's based on Dan Foreman-Mackey's example here https://dfm.io/posts/travis-latex/%
+% -----------------------------------------
+% Template From:
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
 
 
-\cvheading{Education}
-\begin{list}{}{\cvlist}
+\documentclass[letterpaper,10pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\usepackage{hyperref}
 
 
-  \item
-        BA 2020, Physics, New York University.
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+%\usepackage{shading}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\usepackage{enumitem}
+\setlist[description]{labelwidth=0.7cm,leftmargin=0.92cm,labelindent=0cm}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcounter{descounter}
+\newcommand{\resetcounter}[0]{\setcounter{descounter}{0}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-6pt}}
+%\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\resheading}[1]{\resetcounter \vspace{15pt} {\Large \textbf{#1}} \\ \vspace{-8pt}
+    \hrulefill\vspace{5pt}}
+\newcommand{\ressubheading}[5]{
+    \vspace{10pt}
+    \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        #3 & #4 \\
+        #5 & \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\descheader}[1]{\textbf{#1}}
+\newcommand{\descitemold}[1]{\stepcounter{descounter} \item[\arabic{descounter}:]
+    #1 \vspace{-5pt}}
+\newcommand{\descitem}[2]{\stepcounter{descounter} \item[\arabic{descounter}:] \textit{#1} \\ #2\vspace{-5pt}}
+%-----------------------------------------------------------
+
+\begin{document}
 
 
-\end{list}
 
-\cvheading{Positions}
-\begin{list}{}{\cvlist}
+\begin{center}
+\textbf{\LARGE Mitchell Karmen}
+\end{center}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}l}
+    Supernova Cosmology Project & \hfill mitchell@nyu.edu \\
+    Lawrence Berkeley National Laboratory & \hfill mitchellkarmen@lbl.gov \\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Education}
+
+    \ressubheading{New York University}{New York, NY}{B.A. Physics}{2016--2020}{}{}{}
+
+    \descheader{Additional Education}
+    \vspace{-0.05in}
+
+        \begin{itemize}
+            \resitem{GROWTH Multi-Wavelength Astronomy Summer School \hfill 2020 } \\
+            \resitem{Center for Computational Astrophysics Data Analysis Bootcamp \hfill 2018--2019} \\
+        \end{itemize}
+
+\resheading{Research Positions}
+
+    \ressubheading{Supernova Cosmology Project, Lawrence Berkeley National Laboratory}{Berkeley, CA}{Research Assistant}{Spring 2021--Present}{Advisor: Saul Perlmutter}
+
+        \begin{itemize}
+                \resitem{Developed new methods of standardizing Type Ia
+                    Supernovae using Neural Networks built in PyTorch and Gaussian Processes in George.}
+
+                \resitem{Built a custom SN Ia spectral time-series fitter, and generative model to be used in time-domain survey simulations.}
+        \end{itemize}
+
+    \ressubheading{Center for Computational Cosmology}{Berkeley, CA}{DOE Science Undergraduate Laboratory Intern}{Fall 2020--Spring 2021}{Advisor: Peter Nugent}
+
+        \begin{itemize}
+                \resitem{Performed image subtractions of early-detection ZTF SNe Ia using MPI and the high performance computing capabilities of NERSC.}
+                \resitem{Used Convolutional Autoencoder Neural Networks built in Tensorflow to cluster Type Ia multi-band light curves for cosmology analysis.}
+        \end{itemize}
+
+    \ressubheading{Black Hole Working Group, Zwicky Transient Facility}{New York, NY}{Scientific Software Developer}{Summer 2020}{Advisor: Sjoert van Velzen}
+
+        \begin{itemize}
+                \resitem{Developed the software for the ZTF Tidal Disruption Event alert pipeline in DESY's Ampel framework.}
+                \resitem{Wrote algorithms for nightly TDE candidate detection, analysis, potential classification, and follow-up.}
+        \end{itemize}
+
+    \ressubheading{NYU Center for Cosmology and Particle Physics}{New York, NY}{Undergraduate Researcher}{2019--2020}{Advisors: Glennys Farrar, Sjoert van Velzen}
+
+        \begin{itemize}
+                \resitem{Cross-matched the \textit{Gaia} and 2MASS surveys to develop a novel metric for galaxy central compactness.}
+                \resitem{Compiled an all-sky catalog of compact galaxies for use in nuclear transient follow-up.}
+        \end{itemize}
+
+\resheading{Publications}
+
+\descheader{In Preparation}
+
+    \begin{itemize}
+
+        \item{ \textit{Extending the Twins Embedding to Correct Type Ia Supernova Peak Magnitudes with Single Spectra at Any Phase} \\ Dixon, S., \textbf{Karmen, M.}, The Nearby Supernova Factory, In Preparation to submit to ApJ (2021) }
+        \vspace{-5pt}
+
+    \end{itemize}
+
+\resheading{Awards and Grants}
+
+    \ressubheading{George Granger Brown Award}{2020}{NYU Department of Physics}{}{}{}
+
+    \vspace{-0.15in}
+    \ressubheading{Dean's Conference Grant}{2020}{NYU Dean's Undergraduate Research Fund}{}{}{}
+
+    \vspace{-0.15in}
+    \ressubheading{Collegiate Research Scholar}{2019}{NYU College of Arts and Sciences}{}{}{}
+
+    \vspace{-0.15in}
+    \ressubheading{DURF Grant}{2019}{NYU Deans Undergraduate Research Fund}{}{}{}
+
+    \vspace{-0.15in}
+    \ressubheading{Research+ Scholar}{2018}{NYU College of Arts and Sciences}{}{}{}
+    \vspace{-0.15in}
+
+\resheading{Outreach and Leadership}
+
+    \ressubheading{Volunteer Mentor}{2021--Present}{Berkeley Lab Director's Apprenticeship Program}{}{}
+    \vspace{-0.15in}
+
+    \ressubheading{Mentor}{2021}{Tampa Heights Junior Civic Association}{}{}
+    \vspace{-0.15in}
+
+    \ressubheading{NYU Society of Physics Students}{2019--2020}{President}{}{}{}
+    \vspace{-0.15in}
+
+    \ressubheading{Volunteer Instructor}{2019--2020}{BioBus}{}{}
+    \vspace{-0.15in}
+
+    \ressubheading{Lead Organizer}{2019--2020}{NYU Physics Mentorship Program}{}{}
+    \vspace{-0.15in}
+
+    \ressubheading{NYU Society of Physics Students}{2017--2018}{Treasurer}{}{}{}
+    \vspace{-0.15in}
+
+\resheading{Conferences and Talks}
+
+\resetcounter
+
+\begin{description}
+    \descitem{Extending the Twins Embedding for Use by the Roman/WFIRST Supernova Survey}
+        {Contributed Talk, Roman Science Team Community Briefing, Virtual (2021)}
+
+    \descitem{Investigating the Variability of Type Ia Supernovae Using Deep Learning}
+    {Poster, LBNL Spring Intern Poster Session, Virtual (2021)}
+
+    \descitem{Unsupervised Clustering of Type Ia Supernova Light Curves}
+    {Poster, LBNL Fall Intern Poster Session, Virtual (2020)}
+
+    \descitem{A New All-Sky Catalog of Compact Galaxies}
+    {Poster, American Astronomical Society Meeting 235, Honolulu, HI (2020)}
+
+    \descitem{A New All-Sky Catalog of Compact Galaxies: Opportunities for Electromagnetic Transient Follow-Up}{Poster, Gotham AstroFest, New York, NY (2019)}
+
+    \descitem{Finding Exoplanets in Strange Orbits}{Contributed Talk, NYU Undergraduate Research Symposium, New York, NY (2018)}
 
 
-  \item
-        Research Assistant, Lawrence Berkeley National Laboratory, 2021--present. \textit{Advisor: Saul Perlmutter}
+\end{description}
 
-  \item
-        DOE Science Undergraduate Laboratory Intern, Lawrence Berkeley National Laboratory, 2020--2021. \textit{Advisor:Peter Nugent}
+\resheading{Teaching}
 
-  \item
-        Scientific Programmer, Zwicky Transient Facility Black Hole Working Group, Summer 2020. \textit{Advisor: Sjoert van Velzen}
-  \item
-        Undergraduate Researcher, NYU Center for Cosmology and Particle Physics, 2019--2020. \textit{Advisor: Glennys Farrar}
+    \ressubheading{Departmental Tutor}{Fall 2018--Spring 2020}{New York University}{}{}
+    \vspace{-0.15in}
 
-\end{list}
+        \begin{itemize}
+                \resitem{General Physics I: Kinematics}
+                \resitem{General Physics II: Electricity and Magnetism}
+        \end{itemize}
 
-\cvheading{Administrative Roles}
-\begin{list}{}{\cvlist}
+    \ressubheading{7th Grade Mathematics Classroom Tutor}{Fall 2017--Spring 2018}{America Reads / America Counts}{}{}
+    \vspace{-0.15in}
 
-\item
-  President, Society of Physics Students, New York University, 2019--2020.
+        \begin{itemize}
+            \resitem{Assisted a middle school math teacher with classroom activities}
+            \resitem{Tutored one-on-one with students struggling in mathematics}
+        \end{itemize}
 
-\item
-  Treasurer, Society of Physics Students, New York University, 2017--2018.
+    \ressubheading{Mathematics Tutor}{2014--2016}{Mathnasium}{}{}
+    \vspace{-0.15in}
 
-\item
-  Tutor, General Physics I and II, New York University Department of Physics, 2018--2020.
-
-
-\end{list}
-
-
-\cvheading{Additional Education}
-\begin{list}{}{\cvlist}
-
-\item
-  GROWTH Multi-Wavelength Astronomy Summer School, 2020.
-
-
-\item
-  Data Analysis Bootcamp, Center for Computational Astrophysics, Flatiron Institute, 2018--2019.
-
-\end{list}
-
-\cvheading{Presentations}
-\begin{list}{}{\cvlist}
-
-\item
-  Extending the Twins Embedding for Use by The Roman/WFIRST Supernova Survey, \textit{Mitchell Karmen, Saul Perlmutter}, Roman Science Team Community Briefing, Fall 2021
-
-\item
-  Investigating the Variability of Type Ia Supernovae Using Deep Learning, \textit{Mitchell Karmen, Peter Nugent, Saul Perlmutter}, Lawrence Berkeley National Laboratory Intern Poster Session, Spring 2021
-\item
-  Unsupervised Clustering of Type Ia Supernova Lightv Curves, \textit{Mitchell Karmen, Peter Nugent}, Lawrence Berkeley National Laboratory Intern Poster Session, Fall 2020
-
-\item
-  A New All-Sky Catalog of Compact Galaxies, \textit{Mitchell Karmen, Glennys Farrar, Sjoert van Velzen}, 235th Meeting of the American Astronomical Society, 2020
-
-\item
-  A New All-Sky Catalog of Compact Galaxies, \textit{Mitchell Karmen, Glennys Farrar, Sjoert van Velzen}, Gotham AstroFest, 2019.
-
-\item
-  Finding Exoplanets in Strange Orbits, \textit{Mitchell Karmen, David Hogg}, NYU Undergraduate Research Symposium, 2018
-
-\end{list}
-
-
-\cvheading{Awards and Grants}
-\begin{list}{}{\cvlist}
-
-\item
-  George Granger Brown Award, NYU Department of Physics, 2020
-
-\item
-  Conference Grant, NYU Dean's Undergraduate Research Fund, 2020.
-
-\item
-  Collegiate Research Scholar, NYU Dean's Undergraduate Research Fund, 2019
-
-\item
-  Research+ Scholar, NYU College of Arts and Sciences, 2018.
-
-\item
-  Collegiate Research Scholar, NYU Dean's Undergraduate Research Fund, 2019
-
-\end{list}
-
-
-\cvheading{Outreach}
-\begin{list}{}{\cvlist}
-
-\item
-  Volunteer Mentor, Berkeley Lab Director's Apprenticeship Program, 2021--Present
-
-\item
-  Mentor, Tampa Heights Junior Civic Association, 2021--Present
-
-\item
-  Volunteer Instructor, BioBus, 2019--2020.
-
-\item
-  Lead Organizer, NYU Physics Mentorship Program, 2019--2020
-
-\end{list}
-
+        \begin{itemize}
+            \resitem{Led group after-school tutoring sessions of mathematics subjects up through calculus.}
+        \end{itemize}
 
 
 \end{document}
