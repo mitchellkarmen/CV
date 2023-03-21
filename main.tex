@@ -1,7 +1,7 @@
 % this copy of my CV is meant for continuous integration.
 % it's based on Dan Foreman-Mackey's example here https://dfm.io/posts/travis-latex/%
 % -----------------------------------------
-% Template From:
+% Template From: 
 % (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
 % (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
 
@@ -69,20 +69,22 @@
 \end{center}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}l}
-    Supernova Cosmology Project & \hfill mitchell@nyu.edu \\
-    Lawrence Berkeley National Laboratory & \hfill mitchellkarmen@lbl.gov \\
+    Johns Hopkins University & \hfill mkarmen1@jhu.edu \\
+     Department of Physics and Astronomy & \hfill mitchell@nyu.edu \\
 \end{tabular*}
 \\
 
-\vspace{0.1in}
+%\vspace{0.1in}
 
 \resheading{Education}
 
-    \ressubheading{New York University}{New York, NY}{B.A. Physics}{2016--2020}{}{}{}
+\ressubheading{Johns Hopkins University}{Baltimore, MD}{Ph.D. Astrophysics}{Fall 2022--Present}{}{}{}
 
+    \ressubheading{New York University}{New York, NY}{B.A. Physics}{2016--2020}{}{}{}
+    
     \descheader{Additional Education}
     \vspace{-0.05in}
-
+    
         \begin{itemize}
             \resitem{GROWTH Multi-Wavelength Astronomy Summer School \hfill 2020 } \\
             \resitem{Center for Computational Astrophysics Data Analysis Bootcamp \hfill 2018--2019} \\
@@ -90,69 +92,75 @@
 
 \resheading{Research Positions}
 
-    \ressubheading{Supernova Cosmology Project, Lawrence Berkeley National Laboratory}{Berkeley, CA}{Research Assistant}{Spring 2021--Present}{Advisor: Saul Perlmutter}
+    \ressubheading{Transient Science @ Space Telescope Science Institute}{Graduate Research Assistant}{Advisor: Suvi Gezari}{Fall 2022--Present \\
+    \textit{Detecting tidal disruption events in the early universe}}
+    
+    \ressubheading{Supernova Cosmology Project, Lawrence Berkeley National Laboratory}{Berkeley, CA}{Research Assistant}{Spring 2021--Summer 2022}{Advisor: Saul Perlmutter \\ \textit{Standardizing Type Ia Supernova Spectral Time Series with Neural Networks}}
+    
+        % \begin{itemize}
+        %         \resitem{Developed new methods of standardizing Type Ia
+        %             Supernovae (SNe Ia) using Neural Networks built in PyTorch and Gaussian Processes in George.}
+                    
+        %         \resitem{Built a custom SNe Ia spectral time-series fitter, and generative model to be used in time-domain survey simulations.}
+        % \end{itemize}
+    
+    \ressubheading{Center for Computational Cosmology}{Berkeley, CA}{DOE Science Undergraduate Laboratory Intern}{Fall 2020--Spring 2021}{Advisor: Peter Nugent \\
+    \textit{Using convolutional neural networks to investigate SN Ia detonation mechanisms}}
+    
+        % \begin{itemize}
+        %         \resitem{Performed image subtractions of early-detection Zwicky Transient Facility SNe Ia using MPI and the high performance computing capabilities of NERSC.}
+        %         \resitem{Used Convolutional Autoencoder Neural Networks built in Tensorflow to cluster Type Ia multi-band light curves for cosmology analysis.}
+        % \end{itemize}
+    
+    \ressubheading{Black Hole Working Group, Zwicky Transient Facility}{New York, NY}{Scientific Software Developer}{Summer 2020}{Advisor: Sjoert van Velzen \\
+    \textit{Main programmer for the ZTF tidal disruption event detection and analysis pipeline}}
+    
+        % \begin{itemize}
+        %         \resitem{Developed the software for the ZTF Tidal Disruption Event alert pipeline in DESY's Ampel framework.}
+        %         \resitem{Wrote algorithms for nightly TDE candidate detection, analysis, potential classification, and follow-up.}
+        % \end{itemize}
+    
+    \ressubheading{NYU Center for Cosmology and Particle Physics}{New York, NY}{Undergraduate Researcher}{2019--2020}{Advisors: Glennys Farrar, Sjoert van Velzen \\
+    \textit{Creating an all-sky catalog of compact galaxies}}
+    
+        % \begin{itemize}
+        %         \resitem{Cross-matched the \textit{Gaia} and 2MASS surveys to develop a novel metric for galaxy central compactness.}
+        %         \resitem{Compiled an all-sky catalog of compact galaxies for use in nuclear transient follow-up.}
+        % \end{itemize}
 
-        \begin{itemize}
-                \resitem{Developed new methods of standardizing Type Ia
-                    Supernovae using Neural Networks built in PyTorch and Gaussian Processes in George.}
-
-                \resitem{Built a custom SN Ia spectral time-series fitter, and generative model to be used in time-domain survey simulations.}
-        \end{itemize}
-
-    \ressubheading{Center for Computational Cosmology}{Berkeley, CA}{DOE Science Undergraduate Laboratory Intern}{Fall 2020--Spring 2021}{Advisor: Peter Nugent}
-
-        \begin{itemize}
-                \resitem{Performed image subtractions of early-detection ZTF SNe Ia using MPI and the high performance computing capabilities of NERSC.}
-                \resitem{Used Convolutional Autoencoder Neural Networks built in Tensorflow to cluster Type Ia multi-band light curves for cosmology analysis.}
-        \end{itemize}
-
-    \ressubheading{Black Hole Working Group, Zwicky Transient Facility}{New York, NY}{Scientific Software Developer}{Summer 2020}{Advisor: Sjoert van Velzen}
-
-        \begin{itemize}
-                \resitem{Developed the software for the ZTF Tidal Disruption Event alert pipeline in DESY's Ampel framework.}
-                \resitem{Wrote algorithms for nightly TDE candidate detection, analysis, potential classification, and follow-up.}
-        \end{itemize}
-
-    \ressubheading{NYU Center for Cosmology and Particle Physics}{New York, NY}{Undergraduate Researcher}{2019--2020}{Advisors: Glennys Farrar, Sjoert van Velzen}
-
-        \begin{itemize}
-                \resitem{Cross-matched the \textit{Gaia} and 2MASS surveys to develop a novel metric for galaxy central compactness.}
-                \resitem{Compiled an all-sky catalog of compact galaxies for use in nuclear transient follow-up.}
-        \end{itemize}
+\clearpage
 
 \resheading{Publications}
 
-\descheader{Submitted}
-
 \begin{itemize}
-        \item{ \textit{A Probabilistic Autoencoder for Type Ia Supernovae Spectral Time Series} \\Stein, G., et al., Submitted to ApJ (2022) }
+        \item{ \textit{A Probabilistic Autoencoder for Type Ia Supernovae Spectral Time Series} \\Stein, G., et al., ApJ (2022) }
+        
+        \item{\textit{Bump Morphology of the CMAGIC Diagram} \\ Aldoroty, L., et al., Submitted to AJ (2022)}
 
 \end{itemize}
 
 \descheader{In Preparation}
-
+    
     \begin{itemize}
-
-        \item{ \textit{Extending the Twins Embedding to Correct Type Ia Supernova Peak Magnitudes with Single Spectra at Any Phase} \\ Dixon, S., \textbf{Karmen, M.}, The Nearby Supernova Factory, In Preparation to submit to ApJ (2022) }
+    
+        \item{ \textit{Extending the Twins Embedding to Correct Type Ia Supernova Peak Magnitudes with Single Spectra at Any Phase} \\ \textbf{Karmen, M.}, The Nearby Supernova Factory, In Preparation to submit to ApJ (2023) }
         \vspace{-5pt}
-
+        
     \end{itemize}
 
-\resheading{}
-
 \resheading{Awards and Grants}
-
+    
     \ressubheading{George Granger Brown Award}{2020}{NYU Department of Physics}{}{}{}
-
+    
     \vspace{-0.15in}
     \ressubheading{Dean's Conference Grant}{2020}{NYU Dean's Undergraduate Research Fund}{}{}{}
-
+    
     \vspace{-0.15in}
     \ressubheading{Collegiate Research Scholar}{2019}{NYU College of Arts and Sciences}{}{}{}
-
+    
     \vspace{-0.15in}
     \ressubheading{DURF Grant}{2019}{NYU Deans Undergraduate Research Fund}{}{}{}
-
+    
     \vspace{-0.15in}
     \ressubheading{Research+ Scholar}{2018}{NYU College of Arts and Sciences}{}{}{}
     \vspace{-0.15in}
@@ -161,19 +169,19 @@
 
     \ressubheading{Volunteer Mentor}{2021--Present}{Berkeley Lab Director's Apprenticeship Program}{}{}
     \vspace{-0.15in}
-
+    
     \ressubheading{Mentor}{2021}{Tampa Heights Junior Civic Association}{}{}
     \vspace{-0.15in}
-
+    
     \ressubheading{NYU Society of Physics Students}{2019--2020}{President}{}{}{}
     \vspace{-0.15in}
-
+    
     \ressubheading{Volunteer Instructor}{2019--2020}{BioBus}{}{}
     \vspace{-0.15in}
-
+    
     \ressubheading{Lead Organizer}{2019--2020}{NYU Physics Mentorship Program}{}{}
     \vspace{-0.15in}
-
+    
     \ressubheading{NYU Society of Physics Students}{2017--2018}{Treasurer}{}{}{}
     \vspace{-0.15in}
 
@@ -182,53 +190,59 @@
 \resetcounter
 
 \begin{description}
-
-    \descitem{Parameterizing Type Ia Supernovae for Roman Space Telescope Cosmology Using Neural Networks and Twins Embedding}
-    {Poster, Exploring the Transient Universe with the Nancy Grace Roman Space Telescope, Pasadena, CA (2022)}
-
     \descitem{Extending the Twins Embedding for Use by the Roman/WFIRST Supernova Survey}
         {Contributed Talk, Roman Science Team Community Briefing, Virtual (2021)}
-
+        
     \descitem{Investigating the Variability of Type Ia Supernovae Using Deep Learning}
     {Poster, LBNL Spring Intern Poster Session, Virtual (2021)}
-
+    
     \descitem{Unsupervised Clustering of Type Ia Supernova Light Curves}
     {Poster, LBNL Fall Intern Poster Session, Virtual (2020)}
-
+    
     \descitem{A New All-Sky Catalog of Compact Galaxies}
     {Poster, American Astronomical Society Meeting 235, Honolulu, HI (2020)}
-
+    
     \descitem{A New All-Sky Catalog of Compact Galaxies: Opportunities for Electromagnetic Transient Follow-Up}{Poster, Gotham AstroFest, New York, NY (2019)}
-
+    
     \descitem{Finding Exoplanets in Strange Orbits}{Contributed Talk, NYU Undergraduate Research Symposium, New York, NY (2018)}
-
+ 
 
 \end{description}
 
 \resheading{Teaching}
 
-    \ressubheading{Departmental Tutor}{Fall 2018--Spring 2020}{New York University}{}{}
+    \ressubheading{Teaching Assistant}{2022--2023}{Johns Hopkins University}{}{}
     \vspace{-0.15in}
 
+    \begin{itemize}
+        \resitem{Planets, Life, and the Universe}
+        \resitem{General Physics Lab I}
+        \resitem{General Physics Lab II}
+    \end{itemize}
+
+    \ressubheading{Departmental Tutor}{Fall 2018--Spring 2020}{New York University}{}{}
+    \vspace{-0.15in}
+    
         \begin{itemize}
                 \resitem{General Physics I: Kinematics}
                 \resitem{General Physics II: Electricity and Magnetism}
         \end{itemize}
-
+    
     \ressubheading{7th Grade Mathematics Classroom Tutor}{Fall 2017--Spring 2018}{America Reads / America Counts}{}{}
     \vspace{-0.15in}
-
+    
         \begin{itemize}
             \resitem{Assisted a middle school math teacher with classroom activities}
             \resitem{Tutored one-on-one with students struggling in mathematics}
         \end{itemize}
-
-    \ressubheading{Mathematics Tutor}{2014--2016}{Mathnasium}{}{}
-    \vspace{-0.15in}
-
-        \begin{itemize}
-            \resitem{Led group after-school tutoring sessions of mathematics subjects up through calculus.}
-        \end{itemize}
+    
+    % \ressubheading{Mathematics Tutor}{2014--2016}{Mathnasium}{}{}
+    % \vspace{-0.15in}
+    
+    %     \begin{itemize}
+    %         \resitem{Led group after-school tutoring sessions of mathematics subjects up through calculus.} 
+    %     \end{itemize}
 
 
 \end{document}
+
